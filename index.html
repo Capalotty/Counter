@@ -7,6 +7,7 @@
         <title>Counter</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
         <link rel="stylesheet" href="index.css">
+        <script src="index.js" defer></script>
     </head>
     <body>
         <div class="container">
@@ -16,22 +17,5 @@
             <button id="save-btn" onclick="save()">SAVE</button>
             <p id="save-el">Saved count: </p>
         </div>
-        <script>
-            let saveEl = document.getElementById("save-el")
-            let countEl = document.getElementById("count-el")
-            let count = 0
-
-            function increment() {
-                count += 1
-                countEl.textContent = count
-            }
-
-            function save() {
-                let countStr = count + " - "
-                saveEl.textContent += countStr
-                countEl.textContent = 0
-                count = 0
-            }
-        </script>
     </body>
 </html>
